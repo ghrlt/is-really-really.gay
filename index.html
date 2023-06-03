@@ -1,0 +1,74 @@
+<script>
+    // check if there is a subdomain
+    if (window.location.hostname.split('.').length === 2) {
+        isSomeoneGay = false;
+    } else {
+        isSomeoneGay = true;
+    }
+
+    if (isSomeoneGay) {
+        // Obtain current url subdomain
+        const GAY_PERSON = window.location.hostname.split('.')[0];
+        
+        // Change title
+        document.title = `${GAY_PERSON} is REALLY REALLY gay!`;
+        // Add css
+        const css = document.createElement('link');
+        css.rel = 'stylesheet';
+        css.type = 'text/css';
+        css.href = `/${GAY_PERSON}/index.css`;
+
+        document.head.appendChild(css);
+
+
+
+        fetch(`${GAY_PERSON}/index.html`)
+            .then((response) => response.text())
+          .then((html) => document.body.innerHTML = html)
+          .then(() => {
+              var elems = document.getElementsByClassName('gay-name');
+              for (let i=0; i < elems.length; i++) {
+                  var el = elems[i];
+                  el.innerHTML = GAY_PERSON[0].toUpperCase() + GAY_PERSON.slice(1);
+                }
+            })
+        
+    } else {
+        
+        // Change title
+        document.title = 'Who is gay?';
+        // Add css
+        const css = document.createElement('link');
+        css.rel = 'stylesheet';
+        css.type = 'text/css';
+        css.href = '/index.css';
+
+        document.head.appendChild(css);
+    }
+</script>
+
+<html>
+<head>
+</html>
+<body>
+    <div class="nogay">
+        <a href="https://i-think-you-are.gay/" style="text-decoration: none;">
+            <h2 class="lgbt">I think you are gay</h2>
+        </a>
+        <a href="https://i-know-you-are.gay/" style="text-decoration: none;">
+            <h2 class="lgbt">I know you are gay</h2>
+        </a>
+    </div>
+
+    <div class="main">
+        <h1 class="wpw">Who is really really gay?</h1>
+        <br><br><br><br><br><br><br><br>
+        <h2>
+            <a href="https://github.com/ghrlt/is-really-really.gay" target="_blank">
+                <span style="text-decoration: underline;">Click here and get a link for a really really gay person you know!</span>
+            </a>
+        </h2>
+    </div>
+
+    <script src="/index.js"></script>
+</body>

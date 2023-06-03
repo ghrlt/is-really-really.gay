@@ -1,0 +1,67 @@
+body {
+    background-color: #0c0c0c;
+    color: white;
+    font-family: sans-serif;
+
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+}
+a, a:hover, a:visited, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes color-change {
+    0% {
+        color: red;
+    }
+    20% {
+        color: orange;
+    }
+    40% {
+        color: yellow;
+    }
+    60% {
+        color: green;
+    }
+    80% {
+        color: blue;
+    }
+    100% {
+        color: purple;
+    }
+}
+
+div.nogay {
+    padding: 2em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+div.nogay > a {
+    border: 1px solid white;
+    padding: .75vw 2vw;
+    border-radius: 50px;
+}
+
+div.main {
+    text-align: center;
+    margin-top: 10vh;
+}
+div.main h1 {
+    font-size: 5vw;
+}
