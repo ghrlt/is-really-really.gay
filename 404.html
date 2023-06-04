@@ -1,3 +1,7 @@
 <script>
-    window.location.href = `${window.location.protocol}//${window.location.host.replace(GAY_PERSON+'.', '')}/`;
+    try {
+        window.location.href = `${window.location.protocol}//${window.location.host.replace(GAY_PERSON+'.', '')}/`;
+    } catch {
+        window.location.href = `${window.location.protocol}//${window.location.host}/`;
+    }
 </script>
