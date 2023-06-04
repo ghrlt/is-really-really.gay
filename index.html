@@ -20,11 +20,11 @@
             const css = document.createElement('link');
             css.rel = 'stylesheet';
             css.type = 'text/css';
-            css.href = `${window.location.protocol}/${window.location.host}/${GAY_PERSON}/index.css`;
+            css.href = `https://is-really-really.gay/${GAY_PERSON}/index.css`;
     
             document.head.appendChild(css);
     
-            fetch(`${window.location.protocol}/${GAY_PERSON}/index.html`)
+            fetch(`https://is-really-really.gay/${GAY_PERSON}/index.html`)
                 .then((response) => {
                     if (response.ok) return response.text();
                     if (response.status === 404) throw new Error('404')
