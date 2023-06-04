@@ -1,6 +1,6 @@
 <script>
     // check if there is a subdomain
-    if (window.location.hostname.split('.').length === 2) {
+    if (window.location.hostname.split('.').length === 2 || window.location.hostname.endsWith('.pages.dev')) {
         isSomeoneGay = false;
     } else {
         isSomeoneGay = true;
@@ -16,13 +16,13 @@
         const css = document.createElement('link');
         css.rel = 'stylesheet';
         css.type = 'text/css';
-        css.href = `/${GAY_PERSON}/index.css`;
+        css.href = `https://is-really-really.gay/${GAY_PERSON}/index.css`;
 
         document.head.appendChild(css);
 
 
 
-        fetch(`${GAY_PERSON}/index.html`)
+        fetch(`https://is-really-really.gay/${GAY_PERSON}/index.html`)
             .then((response) => response.text())
           .then((html) => document.body.innerHTML = html)
           .then(() => {
@@ -41,7 +41,7 @@
         const css = document.createElement('link');
         css.rel = 'stylesheet';
         css.type = 'text/css';
-        css.href = '/index.css';
+        css.href = 'https://is-really-really.gay/index.css';
 
         document.head.appendChild(css);
     }
@@ -70,5 +70,5 @@
         </h2>
     </div>
 
-    <script src="/index.js"></script>
+    <script src="https://is-really-really.gay/index.js"></script>
 </body>
